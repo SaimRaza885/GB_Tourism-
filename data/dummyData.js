@@ -1,0 +1,228 @@
+export const tours = [
+  {
+    id: 1,
+    name: "Hunza Valley Explorer",
+    location: "Hunza Valley",
+    description:
+      "Experience the breathtaking beauty of Hunza Valley with stunning views of Rakaposhi and ancient forts.",
+    price: 25000,
+    duration: "3 Days",
+    image: "/jj.jpg?height=300&width=400",
+    rating: 4.9,
+    whatsapp: "+923001234567",
+  },
+  {
+    id: 2,
+    name: "Fairy Meadows Trek",
+    location: "Fairy Meadows",
+    description: "Trek to the magical Fairy Meadows with stunning views of Nanga Parbat, the killer mountain.",
+    price: 35000,
+    duration: "4 Days",
+    image: "/b.jpg?height=300&width=400",
+    rating: 4.8,
+    whatsapp: "+923001234567",
+  },
+  {
+    id: 3,
+    name: "Attabad Lake Adventure",
+    location: "Attabad Lake",
+    description: "Enjoy boating and scenic views at the turquoise Attabad Lake formed by a landslide.",
+    price: 18000,
+    duration: "2 Days",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Attabad.jpg/330px-Attabad.jpg",
+    rating: 4.7,
+    whatsapp: "+923001234567",
+  },
+  {
+    id: 4,
+    name: "Naltar Valley Tour",
+    location: "Naltar Valley",
+    description: "Visit the colorful Naltar Lakes surrounded by pine forests and snow-capped peaks.",
+    price: 22000,
+    duration: "2 Days",
+    image: "/naltar.jpg?height=300&width=400",
+    rating: 4.6,
+    whatsapp: "+923001234567",
+  },
+  {
+    id: 5,
+    name: "Khunjerab Pass Expedition",
+    location: "Khunjerab Pass",
+    description: "Journey to the highest paved international border crossing in the world at 4,693m.",
+    price: 45000,
+    duration: "5 Days",
+    image: "/lake1.avif?height=300&width=400",
+    rating: 4.9,
+    whatsapp: "+923001234567",
+  },
+  {
+    id: 6,
+    name: "Deosai Plains Safari",
+    location: "Deosai National Park",
+    description: "Explore the second highest plateau in the world, home to Himalayan brown bears.",
+    price: 40000,
+    duration: "4 Days",
+    image: "/rakaposhi.jpg?height=300&width=400",
+    rating: 4.8,
+    whatsapp: "+923001234567",
+  },
+]
+
+export const packages = [
+  {
+    id: 1,
+    name: "Complete Gilgit-Baltistan Package",
+    location: "Multiple Locations",
+    description:
+      "All-inclusive 10-day tour covering Hunza, Skardu, Fairy Meadows, and Deosai with accommodation and meals.",
+    price: 150000,
+    duration: "10 Days",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Attabad.jpg/330px-Attabad.jpg",
+    rating: 5.0,
+    whatsapp: "+923001234567",
+    includes: ["Accommodation", "Meals", "Transport", "Guide"],
+  },
+  {
+    id: 2,
+    name: "Honeymoon Special Package",
+    location: "Hunza & Skardu",
+    description: "Romantic 7-day getaway with luxury hotels, private transfers, and candlelight dinners.",
+    price: 120000,
+    duration: "7 Days",
+    image: "/hotel.jpg?height=300&width=400",
+    rating: 4.9,
+    whatsapp: "+923001234567",
+    includes: ["Luxury Stay", "Private Car", "Meals", "Activities"],
+  },
+  {
+    id: 3,
+    name: "Adventure Trekking Package",
+    location: "K2 Base Camp",
+    description: "Epic 14-day trek to K2 Base Camp for experienced trekkers seeking ultimate adventure.",
+    price: 250000,
+    duration: "14 Days",
+    image: "/b.jpg?height=300&width=400",
+    rating: 4.8,
+    whatsapp: "+923001234567",
+    includes: ["Camping Gear", "Porters", "Permits", "Meals"],
+  },
+]
+
+export const cars = [
+  {
+    id: 1,
+    name: "Toyota Land Cruiser SUV",
+    type: "4x4 SUV",
+    description: "Perfect for rough mountain terrain with AC and comfortable seating for 7 passengers.",
+    pricePerDay: 15000,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAV3tlpXgUyJaSUnliILyWBd8O8ZHV2FecWA&s",
+    seats: 7,
+    whatsapp: "+923001234567",
+  },
+  {
+    id: 2,
+    name: "Toyota Corolla",
+    type: "Sedan",
+    description: "Economical sedan suitable for paved roads with AC and comfortable city travel.",
+    pricePerDay: 6000,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTk7up4ByTv5RJUuxCpmID8Xig1N_zteHakg&s",
+    seats: 4,
+    whatsapp: "+923001234567",
+  },
+  {
+    id: 3,
+    name: "Toyota Hiace",
+    type: "Van",
+    description: "Spacious van ideal for group travel with 12 seats and luggage space.",
+    pricePerDay: 12000,
+    image: "https://cache3.pakwheels.com/system/car_generation_pictures/3877/original/front_end.jpg?1451548930",
+    seats: 12,
+    whatsapp: "+923001234567",
+  },
+  {
+    id: 4,
+    name: "Suzuki Mehran",
+    type: "Compact",
+    description: "Budget-friendly compact car for short trips around the city.",
+    pricePerDay: 3500,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU2Pynv158eb6i3-gsouhPvtEf6lE2X9laxw&s",
+    seats: 4,
+    whatsapp: "+923001234567",
+  },
+]
+
+export const services = [
+  {
+    id: 1,
+    title: "All You Need",
+    description: "From flights, stays, to sights, just count on our complete products.",
+    icon: "briefcase",
+  },
+  {
+    id: 2,
+    title: "Flexible Booking",
+    description: "From flights, stays, to sights, just count on our complete products.",
+    icon: "calendar",
+  },
+  {
+    id: 3,
+    title: "Secure Payment",
+    description: "From flights, stays, to sights, just count on our complete products.",
+    icon: "shield",
+  },
+]
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Ahmed Khan",
+    avatar: "/Ellipse.png?height=60&width=60",
+    rating: 5,
+    text: "I love Gilgit Tourism, this is the best place to buy tickets and help you find your dream holiday in the mountains!",
+  },
+  {
+    id: 2,
+    name: "Sarah Williams",
+    avatar: "/Ellipse.png?height=60&width=60",
+    rating: 5,
+    text: "Amazing experience! The Hunza Valley tour was absolutely breathtaking. Highly recommend their services.",
+  },
+  {
+    id: 3,
+    name: "Irfan Rahmat",
+    avatar: "/Ellipse.png?height=60&width=60",
+    rating: 5,
+    text: "Best travel agency for Gilgit-Baltistan. Professional guides and well-organized trips!",
+  },
+]
+
+export const stats = [
+  { value: "200+", label: "Holiday Packages" },
+  { value: "450", label: "Taxi/Cabs" },
+  { value: "10", label: "Premium Airlines" },
+  { value: "12k+", label: "Happy Customers" },
+]
+
+export const features = [
+  {
+    id: 1,
+    title: "Select many locations",
+    description: "Choose your favorite location",
+    icon: "location",
+    color: "primary",
+  },
+  {
+    id: 2,
+    title: "Schedule your trip",
+    description: "Set the date you prefer",
+    icon: "calendar",
+    color: "secondary",
+  },
+  {
+    id: 3,
+    title: "Big discounts",
+    description: "Get discounts for every service",
+    icon: "discount",
+    color: "accent",
+  },
+]
