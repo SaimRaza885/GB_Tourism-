@@ -1,5 +1,3 @@
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
 import PageHeader from "@/components/PageHeader"
 import ListingCard from "@/components/ListingCard"
 import { cars } from "@/data/dummyData"
@@ -11,26 +9,22 @@ export const metadata = {
 
 export default function CarsPage() {
   return (
-    <>
-      <Header />
-      <main>
-        <PageHeader
-          title="Car Rentals"
-          subtitle="Transportation"
-          description="Choose from our fleet of well-maintained vehicles for a comfortable journey through the mountains."
-        />
+    <main>
+      <PageHeader
+        title="Car Rentals"
+        subtitle="Transportation"
+        description="Choose from our fleet of well-maintained vehicles for a comfortable journey through the mountains."
+      />
 
-        <section className="py-16 lg:py-24 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {cars.map((car) => (
-                <ListingCard key={car.id} item={car} type="car" />
-              ))}
-            </div>
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {cars.map((car) => (
+              <ListingCard key={car.id} item={car} type="car" />
+            ))}
           </div>
-        </section>
-      </main>
-      <Footer />
-    </>
+        </div>
+      </section>
+    </main>
   )
 }
