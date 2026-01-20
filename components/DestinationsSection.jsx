@@ -25,34 +25,39 @@ export default function DestinationsSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredTours.map((tour) => (
-            <div
+            <Link
               key={tour.id}
-              className="group bg-card rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+              href={`/tours/${tour.id}`}
+              className="block"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <img
-                  src={tour.image || "/women.png?height=300&width=300"}
-                  alt={tour.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute top-4 left-4 px-3 py-1.5 bg-primary text-primary-foreground text-xs font-medium rounded-full">
-                  {tour.location}
-                </div>
-              </div>
-              <div className="p-5">
-                <h3 className="font-heading font-semibold text-lg mb-1">{tour.name}</h3>
-                <p className="text-muted-foreground text-sm mb-3">{tour.location}</p>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className="text-xl font-bold text-primary">Rs {tour.price.toLocaleString()}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <FaStar className="text-secondary text-sm" />
-                    <span className="text-sm">{tour.rating}</span>
+              <div
+                className="group bg-card rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col"
+              >
+                <div className="relative aspect-4/3 overflow-hidden">
+                  <img
+                    src={tour.image || "/women.png?height=300&width=300"}
+                    alt={tour.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 left-4 px-3 py-1.5 bg-primary text-primary-foreground text-xs font-medium rounded-full">
+                    {tour.location}
                   </div>
                 </div>
+                <div className="p-5 flex flex-col grow">
+                  <h3 className="font-heading font-semibold text-lg mb-1 group-hover:text-primary transition-colors">{tour.name}</h3>
+                  <p className="text-muted-foreground text-sm mb-3">{tour.location}</p>
+                  <div className="flex items-center justify-between mt-auto">
+                    <div>
+                      <span className="text-xl font-bold text-primary">Rs {tour.price.toLocaleString()}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <FaStar className="text-secondary text-sm" />
+                      <span className="text-sm">{tour.rating}</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
