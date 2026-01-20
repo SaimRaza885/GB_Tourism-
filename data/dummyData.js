@@ -18,7 +18,7 @@ export const tours = [
       "/lake1.avif?height=600&width=800",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Attabad.jpg/800px-Attabad.jpg",
     ],
-    videoUrl: "https://www.youtube.com/embed/ysz5S6PUM-U",
+    videoUrl: "https://www.youtube.com/watch?v=eEoIfbTV72c&pp=ygUTZ2lnbGl0IHRvdXIgdmlkb2VzIA%3D%3D",
     rating: 4.9,
     reviews: [
       {
@@ -58,7 +58,7 @@ export const tours = [
       "/rakaposhi.jpg?height=600&width=800",
       "/lake1.avif?height=600&width=800",
     ],
-    videoUrl: "https://www.youtube.com/embed/ysz5S6PUM-U",
+    videoUrl: "https://www.youtube.com/watch?v=K3IZMp6V9dk&pp=ygUTZ2lnbGl0IHRvdXIgdmlkb2VzIA%3D%3D",
     rating: 4.8,
     reviews: [
       {
@@ -92,7 +92,7 @@ export const tours = [
       "/b.jpg?height=600&width=800",
       "/rakaposhi.jpg?height=600&width=800",
     ],
-    videoUrl: "https://www.youtube.com/embed/ysz5S6PUM-U",
+    videoUrl: "https://www.youtube.com/watch?v=K3IZMp6V9dk&pp=ygUTZ2lnbGl0IHRvdXIgdmlkb2VzIA%3D%3D",
     rating: 4.7,
     reviews: [],
     faqs: [
@@ -118,7 +118,7 @@ export const tours = [
       "/jj.jpg?height=600&width=800",
       "/lake1.avif?height=600&width=800",
     ],
-    videoUrl: "https://www.youtube.com/embed/ysz5S6PUM-U",
+    videoUrl: "https://www.youtube.com/watch?v=_JSlbVqTBlQ&pp=ygUTZ2lnbGl0IHRvdXIgdmlkb2VzIA%3D%3D",
     rating: 4.6,
     reviews: [
       {
@@ -152,7 +152,7 @@ export const tours = [
       "/b.jpg?height=600&width=800",
       "/naltar.jpg?height=600&width=800",
     ],
-    videoUrl: "https://www.youtube.com/embed/ysz5S6PUM-U",
+    videoUrl: "https://www.youtube.com/watch?v=_JSlbVqTBlQ&pp=ygUTZ2lnbGl0IHRvdXIgdmlkb2VzIA%3D%3D",
     rating: 4.9,
     reviews: [],
     faqs: [
@@ -179,7 +179,7 @@ export const tours = [
       "/lake1.avif?height=600&width=800",
       "/naltar.jpg?height=600&width=800",
     ],
-    videoUrl: "https://www.youtube.com/embed/ysz5S6PUM-U",
+    videoUrl: "https://www.youtube.com/watch?v=0dWFOELN9dw&pp=ygUTZ2lnbGl0IHRvdXIgdmlkb2VzIA%3D%3D",
     rating: 4.8,
     reviews: [],
     faqs: [
@@ -208,7 +208,7 @@ export const packages = [
       "/jj.jpg?height=600&width=800",
       "/rakaposhi.jpg?height=600&width=800",
     ],
-    videoUrl: "https://www.youtube.com/embed/ysz5S6PUM-U",
+    videoUrl: "https://www.youtube.com/watch?v=U99ke1_cDkk&pp=ygUTZ2lnbGl0IHRvdXIgdmlkb2VzINIHCQlPCgGHKiGM7w%3D%3D",
     rating: 5.0,
     reviews: [
       {
@@ -253,7 +253,7 @@ export const packages = [
       "/b.jpg?height=600&width=800",
       "/naltar.jpg?height=600&width=800",
     ],
-    videoUrl: "https://www.youtube.com/embed/ysz5S6PUM-U",
+    videoUrl: "https://www.youtube.com/watch?v=U99ke1_cDkk&pp=ygUTZ2lnbGl0IHRvdXIgdmlkb2VzINIHCQlPCgGHKiGM7w%3D%3D",
     rating: 4.9,
     reviews: [],
     whatsapp: "+923001234567",
@@ -288,7 +288,7 @@ export const packages = [
       "/lake1.avif?height=600&width=800",
       "/jj.jpg?height=600&width=800",
     ],
-    videoUrl: "https://www.youtube.com/embed/ysz5S6PUM-U",
+    videoUrl: "https://www.youtube.com/watch?v=1j9wYgK88hM&pp=ygUTZ2lnbGl0IHRvdXIgdmlkb2VzIA%3D%3D",
     rating: 4.8,
     reviews: [],
     whatsapp: "+923001234567",
