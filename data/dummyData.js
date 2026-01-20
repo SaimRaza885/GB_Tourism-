@@ -58,7 +58,7 @@ export const tours = [
       "/rakaposhi.jpg?height=600&width=800",
       "/lake1.avif?height=600&width=800",
     ],
-    videoUrl: "https://www.youtube.com/watch?v=K3IZMp6V9dk&pp=ygUTZ2lnbGl0IHRvdXIgdmlkb2VzIA%3D%3D,
+    videoUrl: "https://www.youtube.com/watch?v=K3IZMp6V9dk&pp=ygUTZ2lnbGl0IHRvdXIgdmlkb2VzIA%3D%3D",
     rating: 4.8,
     reviews: [
       {
