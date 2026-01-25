@@ -3,6 +3,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { FaCalendarAlt, FaStar, FaMapMarkerAlt, FaWhatsapp, FaImage, FaPlay, FaQuestionCircle, FaShieldAlt, FaAward, FaUserTie } from "react-icons/fa"
 import GalleryViewer from "@/components/GalleryViewer"
+import BookingButton from "@/components/BookingButton"
 
 export async function generateStaticParams() {
     return tours.map((tour) => ({
@@ -214,14 +215,7 @@ export default async function TourDetailsPage({ params }) {
                                     </div>
                                 </div>
 
-                                <a
-                                    href={`https://wa.me/${tour.whatsapp?.replace(/[^0-9]/g, "")}?text=Hi, I am interested in booking the tour: ${tour.name}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center gap-3 w-full py-4 bg-[#25D366] text-white rounded-xl font-bold text-lg hover:bg-[#128C7E] transition-all hover:shadow-lg hover:-translate-y-0.5"
-                                >
-                                    <FaWhatsapp className="text-2xl" /> Book via WhatsApp
-                                </a>
+                                <BookingButton item={tour} type="tour" />
 
                                 <p className="text-xs text-center text-muted-foreground mt-4 flex items-center justify-center gap-1">
                                     <FaShieldAlt className="text-primary" /> No Booking Fees • Instant Confirmation
@@ -230,17 +224,17 @@ export default async function TourDetailsPage({ params }) {
 
                             {/* Similar Tours Widget */}
                             <div className="bg-card rounded-3xl p-6 border border-border shadow-lg">
-                                <h3 className="font-bold text-lg mb-4">You Might Also Like</h3>
+                                <h3 className="font-bold text-lg mb-4">Other Tours</h3>
                                 <div className="space-y-4">
                                     {similarTours.map((st) => (
                                         <Link href={`/tours/${st.id}`} key={st.id} className="flex gap-3 group">
-                                            <div className="w-20 h-20 rounded-lg overflow-hidden shrink-0">
-                                                <img src={st.image} alt={st.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform" />
+                                            <div className="w-20 h-16 rounded-lg overflow-hidden shrink-0 bg-muted">
+                                                <img src={st.image} alt={st.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                                             </div>
-                                            <div>
-                                                <h4 className="font-semibold text-sm line-clamp-2 group-hover:text-primary transition-colors">{st.name}</h4>
-                                                <span className="text-xs text-muted-foreground block mb-1">{st.location}</span>
-                                                <span className="text-primary font-bold text-sm">Rs {st.price.toLocaleString()}</span>
+                                            <div className="flex flex-col justify-center">
+                                                <h4 className="font-semibold text-xs line-clamp-1 group-hover:text-primary transition-colors">{st.name}</h4>
+                                                <span className="text-[10px] text-muted-foreground block mb-0.5">{st.location}</span>
+                                                <span className="text-primary font-bold text-xs">Rs {st.price.toLocaleString()}</span>
                                             </div>
                                         </Link>
                                     ))}

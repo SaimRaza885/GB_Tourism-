@@ -3,6 +3,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { FaCalendarAlt, FaStar, FaMapMarkerAlt, FaWhatsapp, FaCheckCircle, FaPlay, FaQuestionCircle, FaShieldAlt, FaPlaneDeparture, FaSuitcase, FaUserShield } from "react-icons/fa"
 import GalleryViewer from "@/components/GalleryViewer"
+import BookingButton from "@/components/BookingButton"
 
 export async function generateStaticParams() {
     return packages.map((pkg) => ({
@@ -31,7 +32,7 @@ export default async function PackageDetailsPage({ params }) {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-0 left-0 w-full p-6 md:p-12 lg:p-20 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                <div className="absolute bottom-0 left-0 w-full p-6 md:p-12 lg:p-20 bg-linear-to-t from-black/90 via-black/50 to-transparent">
                     <div className="max-w-7xl mx-auto animation-fade-in-up">
                         <div className="flex flex-wrap gap-2 mb-4">
                             <span className="inline-block py-1.5 px-4 rounded-full bg-secondary text-secondary-foreground text-sm font-semibold shadow-md">
@@ -216,33 +217,26 @@ export default async function PackageDetailsPage({ params }) {
                                     </ul>
                                 </div>
 
-                                <a
-                                    href={`https://wa.me/${pkg.whatsapp?.replace(/[^0-9]/g, "")}?text=Hi, I am interested in the package: ${pkg.name}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center gap-3 w-full py-4 bg-[#25D366] text-white rounded-xl font-bold text-lg hover:bg-[#128C7E] transition-all hover:shadow-lg hover:-translate-y-0.5"
-                                >
-                                    <FaWhatsapp className="text-2xl" /> Book Package
-                                </a>
-
-                                <p className="text-xs text-center text-muted-foreground mt-4 flex items-center justify-center gap-1">
-                                    <FaUserShield className="text-primary" /> 24/7 Support Included
-                                </p>
+                                <BookingButton item={pkg} type="package" />
                             </div>
 
-                            {/* Similar Packages */}
+                            <p className="text-[10px] text-center text-muted-foreground mt-4 flex items-center justify-center gap-1 font-medium italic">
+                                <FaUserShield className="text-primary text-xs" /> 24/7 Premium Support & Travel Insurance Included
+                            </p>
+
+                            {/* Similar Packages Widget */}
                             <div className="bg-card rounded-3xl p-6 border border-border shadow-lg">
-                                <h3 className="font-bold text-lg mb-4">Similar Packages</h3>
+                                <h3 className="font-bold text-lg mb-4">Other Packages</h3>
                                 <div className="space-y-4">
                                     {similarPackages.map((sp) => (
                                         <Link href={`/packages/${sp.id}`} key={sp.id} className="flex gap-3 group">
-                                            <div className="w-20 h-20 rounded-lg overflow-hidden shrink-0">
-                                                <img src={sp.image} alt={sp.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform" />
+                                            <div className="w-20 h-16 rounded-lg overflow-hidden shrink-0 bg-muted">
+                                                <img src={sp.image} alt={sp.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                                             </div>
-                                            <div>
-                                                <h4 className="font-semibold text-sm line-clamp-2 group-hover:text-primary transition-colors">{sp.name}</h4>
-                                                <span className="text-xs text-muted-foreground block mb-1">{sp.duration}</span>
-                                                <span className="text-primary font-bold text-sm">Rs {sp.price.toLocaleString()}</span>
+                                            <div className="flex flex-col justify-center">
+                                                <h4 className="font-semibold text-xs line-clamp-1 group-hover:text-primary transition-colors">{sp.name}</h4>
+                                                <span className="text-[10px] text-muted-foreground block mb-0.5">{sp.duration}</span>
+                                                <span className="text-primary font-bold text-xs">Rs {sp.price.toLocaleString()}</span>
                                             </div>
                                         </Link>
                                     ))}
@@ -252,6 +246,7 @@ export default async function PackageDetailsPage({ params }) {
                     </div>
                 </div>
             </div>
-        </main>
+
+        </main >
     )
 }

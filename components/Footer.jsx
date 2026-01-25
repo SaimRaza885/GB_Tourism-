@@ -1,31 +1,46 @@
+"use client"
+import React, { useState } from "react"
 import Link from "next/link"
 import { FaFacebook, FaInstagram, FaTwitter, FaMountain } from "react-icons/fa"
 import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa"
+import BookingModal from "./BookingModal"
 
 export default function Footer() {
   return (
     <footer className="bg-foreground text-white">
-      {/* Newsletter Section */}
-      <div className="bg-primary">
+      {/* Lead Generation Section: Custom Tour Plan */}
+      <div className="bg-linear-to-r from-primary via-primary/95 to-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
-            <p className="text-primary-foreground/80 text-sm font-medium tracking-widest uppercase mb-4">
-              Subscribe to our newsletter
-            </p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-8 text-balance">
-              {"Prepare yourself and let's explore the beautiful mountains"}
-            </h2>
-            <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
-              <div className="flex-1 relative">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="w-full px-5 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
-                />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="text-center lg:text-left space-y-4">
+              <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-white text-xs font-bold uppercase tracking-wider border border-white/20">
+                Tailor-Made Experience
+              </span>
+              <h2 className="font-heading text-3xl md:text-5xl font-bold text-white leading-tight">
+                Get a Custom <span className="text-secondary">Tour Plan</span>
+              </h2>
+              <p className="text-primary-foreground/80 text-lg max-w-xl mx-auto lg:mx-0">
+                Don't settle for generic packages. Tell us your preferences and let our local experts design a personalized journey through Gilgit-Baltistan.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-6">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-linear-to-r from-secondary to-orange-400 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                <LeadGenerationButton />
               </div>
-              <button className="px-6 py-3 bg-secondary text-secondary-foreground rounded-full font-medium hover:bg-secondary/90 transition-colors">
-                Subscribe
-              </button>
+              <div className="flex -space-x-4">
+                {[1, 2, 3, 4].map((i) => (
+                  <img
+                    key={i}
+                    src={`https://i.pravatar.cc/100?u=${i + 10}`}
+                    alt="User"
+                    className="w-12 h-12 rounded-full border-4 border-primary ring-2 ring-white/10"
+                  />
+                ))}
+                <div className="w-12 h-12 rounded-full border-4 border-primary bg-secondary flex items-center justify-center text-secondary-foreground text-xs font-bold">
+                  500+
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -172,5 +187,31 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+  )
+}
+
+function LeadGenerationButton() {
+  const [isOpen, setIsOpen] = useState(false)
+  const item = {
+    name: "Custom Tour Plan",
+    whatsapp: "923123456789" // Fallback WhatsApp number
+  }
+
+  return (
+    <>
+      <button
+        onClick={() => setIsOpen(true)}
+        className="relative px-8 py-4 bg-secondary text-secondary-foreground rounded-full font-bold text-lg hover:bg-secondary/90 transition-all hover:scale-105 shadow-xl whitespace-nowrap"
+      >
+        Request a Quote
+      </button>
+
+      <BookingModal
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        item={item}
+        type="plan"
+      />
+    </>
   )
 }

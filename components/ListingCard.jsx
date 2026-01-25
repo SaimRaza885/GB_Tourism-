@@ -1,7 +1,10 @@
 'use client'
 
-import { FaWhatsapp, FaMapMarkerAlt, FaStar } from "react-icons/fa"
+import { FaWhatsapp, FaMapMarkerAlt, FaStar, FaCalendarCheck } from "react-icons/fa"
 import Link from "next/link"
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import BookingModal from "./BookingModal"
 
 export default function ListingCard({ item, type = "tour" }) {
   const whatsappLink = `https://wa.me/${item.whatsapp?.replace(/[^0-9]/g, "")}?text=Hi, I'm interested in ${item.name}`
@@ -9,9 +12,12 @@ export default function ListingCard({ item, type = "tour" }) {
   // Function to determine the link URL based on type
   const getLinkUrl = () => {
     if (type === "tour") return `/tours/${item.id}`
+    if (type === "car") return `/cars/${item.id}`
+    if (type === "package") return `/packages/${item.id}`
     return null
   }
 
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const linkUrl = getLinkUrl()
 
   const CardContent = () => (
@@ -83,18 +89,30 @@ export default function ListingCard({ item, type = "tour" }) {
         </div>
       )}
 
-      {/* WhatsApp Button - Kept separate to ensure it's always clickable without triggering the page nav */}
-      <div className="p-5 pt-0 mt-auto">
+      {/* Action Buttons */}
+      <div className="p-5 pt-0 mt-auto space-y-2">
+        <Button
+          onClick={() => setIsModalOpen(true)}
+          className="w-full py-6 bg-primary text-primary-foreground rounded-xl font-bold hover:shadow-md transition-all relative z-10"
+        >
+          <FaCalendarCheck className="mr-2" /> Book Now
+        </Button>
         <a
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 w-full py-3 bg-[#25D366] text-white rounded-xl font-medium hover:bg-[#128C7E] transition-colors relative z-10"
+          className="flex items-center justify-center gap-2 w-full py-3 bg-muted/50 text-muted-foreground rounded-xl font-medium hover:bg-muted transition-colors relative z-10 text-sm"
         >
-          <FaWhatsapp className="text-lg" />
-          Book via WhatsApp
+          <FaWhatsapp className="text-lg" /> Chat via WhatsApp
         </a>
       </div>
+
+      <BookingModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        item={item}
+        type={type}
+      />
     </div>
   )
 }

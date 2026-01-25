@@ -1,20 +1,21 @@
 import HeroSection from "@/components/HeroSection"
-import ServicesSection from "@/components/ServicesSection"
+import TrustSection from "@/components/TrustSection"
 import DestinationsSection from "@/components/DestinationsSection"
-import StatsSection from "@/components/StatsSection"
-import FeaturesSection from "@/components/FeaturesSection"
+import PackagesSection from "@/components/PackagesSection"
+import CarRentalBanner from "@/components/CarRentalBanner"
 import TestimonialsSection from "@/components/TestimonialsSection"
+import BlogSection from "@/components/BlogSection"
 
 export default function HomePage() {
   return (
     <main>
       <HeroSection />
-      <ServicesSection />
       <DestinationsSection />
-      <StatsSection />
-      <FeaturesSection />
+      <PackagesSection />
+      <CarRentalBanner />
+      <TrustSection />
       <TestimonialsSection />
-
+      <BlogSection />
     </main>
   )
 }
