@@ -1,13 +1,25 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { FaWhatsapp, FaBars, FaTimes, FaMountain } from "react-icons/fa"
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
+
+  // Transparency logic: Only on Home page and when not scrolled
+  const isTransparent = pathname === "/" && !isScrolled
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -21,7 +33,12 @@ export default function Header() {
   const isActive = (path) => pathname === path
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isTransparent && !isMenuOpen
+        ? "bg-transparent border-transparent py-4"
+        : "bg-background/95 backdrop-blur-md border-b border-border py-0 shadow-sm"
+        }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -29,7 +46,7 @@ export default function Header() {
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <FaMountain className="text-primary-foreground text-xl" />
             </div>
-            <span className="font-heading font-bold text-xl text-foreground">
+            <span className={`font-heading font-bold text-xl transition-colors ${isTransparent ? "text-white" : "text-foreground"}`}>
               Gilgit<span className="text-primary">Tourism</span>
             </span>
           </Link>
@@ -40,9 +57,10 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(link.path) ? "text-primary" : "text-muted-foreground"
-                }`}
+                className={`text-sm font-medium transition-all hover:text-primary ${isActive(link.path)
+                  ? "text-primary"
+                  : isTransparent ? "text-white/90 hover:text-white" : "text-muted-foreground"
+                  }`}
               >
                 {link.name}
               </Link>
@@ -53,7 +71,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <Link
               href="/contact"
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className={`text-sm font-medium transition-colors ${isTransparent ? "text-white/80 hover:text-white" : "text-muted-foreground hover:text-primary"}`}
             >
               Login
             </Link>
@@ -69,7 +87,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-foreground"
+            className={`lg:hidden p-2 transition-colors ${isTransparent ? "text-white" : "text-foreground"}`}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -85,9 +103,8 @@ export default function Header() {
                   key={link.name}
                   href={link.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                    isActive(link.path) ? "bg-primary-light text-primary" : "text-muted-foreground hover:bg-muted"
-                  }`}
+                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${isActive(link.path) ? "bg-primary-light text-primary" : "text-muted-foreground hover:bg-muted"
+                    }`}
                 >
                   {link.name}
                 </Link>

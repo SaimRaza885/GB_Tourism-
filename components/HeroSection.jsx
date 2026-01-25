@@ -1,109 +1,50 @@
-import Link from "next/link"
-import { FaArrowRight, FaPlay } from "react-icons/fa"
+import Link from "next/link";
+import { FaChevronRight } from "react-icons/fa";
+
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-background">
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-1/4 w-16 h-16">
-        <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-primary opacity-20">
-          <path
-            d="M5 12h14M12 5l7 7-7 7"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+    <section className="relative h-[90vh] min-h-[650px] w-full flex items-center overflow-hidden bg-gray-900">
+      {/* Cinematic Background */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1661818158720-410ccb39ba13?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGdpbGdpdCUyMGJhbHRpc3RhbnxlbnwwfHwwfHx8MA%3D%3D"
+          alt="Majestic Gilgit-Baltistan Expedition"
+          className="w-full h-full object-cover object-center brightness-90"
+        />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/70 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black/70" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="order-2 lg:order-1">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary-light rounded-full mb-6">
-              <span className="text-secondary text-sm font-medium">Explore the world</span>
-              <span className="text-secondary">✨</span>
-            </div>
+      {/* Hero Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-2xl space-y-6">
 
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
-              From Gilgit
-              <br />
-              <span className="text-primary">to the World.</span>
-            </h1>
+          {/* Headline */}
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight uppercase animate-in fade-in slide-in-from-left-8 duration-1000">
 
-            <p className="text-muted-foreground text-lg mb-8 max-w-lg">
-              Stay updated with travel tips, recommendations, and latest packages. Your gateway to the majestic
-              mountains of Gilgit-Baltistan.
-            </p>
+            <span className="text-primary italic">majesty</span> of the <br />
+            Karakoram Mountains
+          </h1>
 
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/tours"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-colors"
-              >
-                Get Started
-                <FaArrowRight className="text-sm" />
-              </Link>
-              <button className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-full font-medium hover:bg-muted transition-colors">
-                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                  <FaPlay className="text-primary-foreground text-xs ml-0.5" />
-                </div>
-                Learn More
-              </button>
-            </div>
+          {/* Subtitle */}
+          <p className="text-white/80 text-base md:text-lg font-medium leading-relaxed animate-in fade-in slide-in-from-left-10 duration-1000 delay-200">
+            From the high-altitude plains of Deosai to the turquoise waters of Attabad, we craft personalized journeys that stay with you forever.
+          </p>
 
-            {/* Partner Logos */}
-            <div className="mt-12 pt-8 border-t border-border">
-              <div className="flex flex-wrap items-center gap-8 opacity-50">
-                <span className="font-heading font-semibold text-sm">traveloka</span>
-                <span className="font-heading font-semibold text-sm">tiket.com</span>
-                <span className="font-heading font-semibold text-sm">Booking.com</span>
-                <span className="font-heading font-semibold text-sm">tripadvisor</span>
-                <span className="font-heading font-semibold text-sm">airbnb</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Content - Image Grid */}
-          <div className="order-1 lg:order-2 relative">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-lg">
-                  <img
-                    src="hotel.jpg?height=400&width=300"
-                    alt="Traveler"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <div className="space-y-4 pt-8">
-                <div className="aspect-square rounded-3xl overflow-hidden shadow-lg">
-                  <img
-                    src="/stream.jpg?height=300&width=300"
-                    alt="Hunza Valley"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
-                  <img
-                    src={"/turist.jpg?height=300&width=300"}
-                    alt="Gilgit Mountains"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Decorative Arrow */}
-            <div className="absolute -top-4 right-1/4 text-primary">
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                <path d="M10 50 Q30 10 50 30" stroke="currentColor" strokeWidth="2" strokeDasharray="4 4" fill="none" />
-                <path d="M45 25 L50 30 L45 35" stroke="currentColor" strokeWidth="2" fill="none" />
-              </svg>
-            </div>
+          {/* CTA */}
+          <div className="pt-4 animate-in fade-in slide-in-from-left-12 duration-1000 delay-300">
+            <Link
+              href="/tours"
+              className="group relative inline-flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-full font-heading font-black text-lg hover:bg-white hover:text-primary transition-all shadow-2xl active:scale-95 overflow-hidden"
+            >
+              <span className="relative z-10">Explore All Tours</span>
+              <FaChevronRight className="relative z-10 text-sm group-hover:translate-x-2 transition-transform duration-300" />
+              <div className="absolute inset-0 bg-linear-to-r from-primary via-white/20 to-primary opacity-0 group-hover:opacity-100 -translate-x-full group-hover:translate-x-full transition-all duration-700" />
+            </Link>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

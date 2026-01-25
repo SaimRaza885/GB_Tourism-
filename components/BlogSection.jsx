@@ -1,29 +1,21 @@
 import Link from "next/link"
 import { FaChevronRight, FaCalendarAlt, FaUser } from "react-icons/fa"
 import { blogPosts } from "@/data/blogPosts"
+import SectionHeading from "./SectionHeading"
 
 export default function BlogSection() {
     // Show the 3 latest posts for a balanced 3-column look
     const latestPosts = blogPosts.slice(0, 3)
 
     return (
-        <section className="py-16 lg:py-24 bg-muted">
+        <section className="py-16 lg:py-24 bg-muted text-center md:text-left">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4 text-center md:text-left">
-                    <div>
-                        <p className="text-primary text-sm font-medium tracking-widest uppercase mb-3 text-center md:text-left">Latest News</p>
-                        <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground leading-tight">
-                            Our Travel <span className="text-primary text-center">Stories</span>
-                        </h2>
-                    </div>
-                    <Link
-                        href="/blog"
-                        className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all group shrink-0"
-                    >
-                        Read All Stories
-                        <FaChevronRight className="text-sm group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                </div>
+                <SectionHeading
+                    badge="Latest News"
+                    title={<>Our Travel <span className="text-primary">Stories</span></>}
+                    linkHref="/blog"
+                    linkText="Read All Stories"
+                />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {latestPosts.map((post) => (
@@ -54,9 +46,16 @@ export default function BlogSection() {
                                         {post.title}
                                     </h3>
 
-                                    <p className="text-muted-foreground text-xs leading-relaxed line-clamp-2">
+                                    <p className="text-muted-foreground text-xs leading-relaxed line-clamp-2 mb-4">
                                         {post.excerpt}
                                     </p>
+
+                                    <div className="mt-auto pt-4 border-t border-border/50">
+                                        <div className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary group-hover:gap-3 transition-all">
+                                            Read Full Story
+                                            <FaChevronRight className="text-[8px]" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </Link>

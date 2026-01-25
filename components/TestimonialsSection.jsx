@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { FaStar, FaChevronLeft, FaChevronRight, FaQuoteLeft } from "react-icons/fa"
 import { testimonials } from "@/data/dummyData"
+import SectionHeading from "./SectionHeading"
 
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -20,10 +21,11 @@ export default function TestimonialsSection() {
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <p className="text-primary text-sm font-medium tracking-widest uppercase mb-3">Testimonials</p>
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">Trust our clients</h2>
-        </div>
+        <SectionHeading
+          center
+          badge="Testimonials"
+          title="Trust our clients"
+        />
 
         <div className="max-w-3xl mx-auto">
           {/* Decorative dots */}
@@ -76,9 +78,8 @@ export default function TestimonialsSection() {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                  index === currentIndex ? "bg-primary" : "bg-border"
-                }`}
+                className={`w-2.5 h-2.5 rounded-full transition-colors ${index === currentIndex ? "bg-primary" : "bg-border"
+                  }`}
               />
             ))}
           </div>

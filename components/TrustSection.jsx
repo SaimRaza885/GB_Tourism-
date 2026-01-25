@@ -1,5 +1,6 @@
 import { stats, services } from "@/data/dummyData"
 import { FaBriefcase, FaCalendarAlt, FaShieldAlt } from "react-icons/fa"
+import SectionHeading from "./SectionHeading"
 
 const iconMap = {
     briefcase: FaBriefcase,
@@ -15,17 +16,12 @@ export default function TrustSection() {
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full -ml-48 -mb-48 blur-3xl pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-                <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-                    <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-primary/20">
-                        Trusted by Travelers
-                    </span>
-                    <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-                        Why Travelers Choose <span className="text-primary italic">Gilgit Tourism</span>
-                    </h2>
-                    <p className="text-muted-foreground text-lg">
-                        We combine local expertise with world-class service standards to ensure your journey through the Karakoram is safe, seamless, and unforgettable.
-                    </p>
-                </div>
+                <SectionHeading
+                    center
+                    badge="Trusted by Travelers"
+                    title={<>Why Travelers Choose <span className="text-primary italic">Gilgit Tourism</span></>}
+                    description="We combine local expertise with world-class service standards to ensure your journey through the Karakoram is safe, seamless, and unforgettable."
+                />
 
                 {/* Benefits Grid */}
                 <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-20">

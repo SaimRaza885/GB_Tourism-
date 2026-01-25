@@ -1,6 +1,7 @@
 import Link from "next/link"
-import { FaChevronRight, FaClock, FaCheckCircle, FaStar } from "react-icons/fa"
+import { FaChevronRight, FaCheckCircle, FaStar } from "react-icons/fa"
 import { packages } from "@/data/dummyData"
+import SectionHeading from "./SectionHeading"
 
 export default function PackagesSection() {
     const featuredPackages = packages.slice(0, 3)
@@ -8,21 +9,12 @@ export default function PackagesSection() {
     return (
         <section className="py-16 lg:py-24 bg-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-                    <div>
-                        <p className="text-primary text-sm font-medium tracking-widest uppercase mb-3">All-Inclusive</p>
-                        <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground leading-tight">
-                            Featured Tour <span className="text-primary">Packages</span>
-                        </h2>
-                    </div>
-                    <Link
-                        href="/packages"
-                        className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all group shrink-0"
-                    >
-                        View All Packages
-                        <FaChevronRight className="text-sm group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                </div>
+                <SectionHeading
+                    badge="All-Inclusive"
+                    title={<>Featured Tour <span className="text-primary">Packages</span></>}
+                    linkHref="/packages"
+                    linkText="View All Packages"
+                />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {featuredPackages.map((pkg) => (

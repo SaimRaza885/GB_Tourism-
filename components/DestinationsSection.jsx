@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa"
 import { tours } from "@/data/dummyData"
+import SectionHeading from "./SectionHeading"
 
 export default function DestinationsSection() {
   const featuredTours = tours.slice(0, 3)
@@ -8,20 +9,20 @@ export default function DestinationsSection() {
   return (
     <section className="py-16 lg:py-24 bg-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-between mb-12">
-          <div>
-            <p className="text-primary text-sm font-medium tracking-widest uppercase mb-3">Top Destinations</p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">Explore top destinations</h2>
-          </div>
-          <div className="hidden sm:flex items-center gap-2">
-            <button className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-background transition-colors">
-              <FaChevronLeft className="text-muted-foreground" />
-            </button>
-            <button className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:bg-primary/90 transition-colors">
-              <FaChevronRight />
-            </button>
-          </div>
-        </div>
+        <SectionHeading
+          badge="Top Destinations"
+          title="Explore top destinations"
+          rightContent={
+            <div className="hidden sm:flex items-center gap-2">
+              <button className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-background transition-colors">
+                <FaChevronLeft className="text-muted-foreground" />
+              </button>
+              <button className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:bg-primary/90 transition-colors">
+                <FaChevronRight />
+              </button>
+            </div>
+          }
+        />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredTours.map((tour) => (
