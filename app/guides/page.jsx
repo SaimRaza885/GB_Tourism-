@@ -4,6 +4,7 @@ import { guides } from "@/data/dummyData"
 import SectionHeading from "@/components/SectionHeading"
 import { FaStar, FaAward, FaCalendarAlt, FaLanguage, FaMountain, FaMapMarkedAlt, FaChevronRight, FaChevronLeft } from "react-icons/fa"
 import Link from "next/link"
+import PageBanner from "@/components/PageBanner"
 import useEmblaCarousel from 'embla-carousel-react'
 import { useCallback, useEffect, useState } from 'react'
 
@@ -37,25 +38,12 @@ export default function GuidesPage() {
 
     return (
         <main className="min-h-screen bg-background">
-            {/* Hero Section remains same... */}
-            <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=2070&auto=format&fit=crop"
-                        alt="Gilgit Baltistan Mountains and Guides"
-                        className="w-full h-full object-cover brightness-50"
-                    />
-                    <div className="absolute inset-0 bg-linear-to-b from-black/60 via-transparent to-background" />
-                </div>
-                <div className="relative z-10 text-center px-4">
-                    <h1 className="text-4xl md:text-6xl font-black text-white mb-4 uppercase tracking-tight font-heading">
-                        Our Local <span className="text-primary italic">Legends</span>
-                    </h1>
-                    <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto font-medium">
-                        Meet the certified experts who bring the stories of Gilgit-Baltistan to life.
-                    </p>
-                </div>
-            </section>
+            <PageBanner
+                height="50vh"
+                title="Our Local Legends"
+                image="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=2070&auto=format&fit=crop"
+                description="Meet the certified experts who bring the stories of Gilgit-Baltistan to life."
+            />
 
             {/* Expertise Section */}
             <section className="py-20">

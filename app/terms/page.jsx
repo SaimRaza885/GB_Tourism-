@@ -1,17 +1,21 @@
 "use client"
 
 import { FaRegHandshake, FaGlobe, FaShieldAlt, FaPhoneAlt } from "react-icons/fa"
+import PageBanner from "@/components/PageBanner"
 
 export default function TermsPage() {
     return (
-        <main className="min-h-screen pt-32 pb-20 max-w-4xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-16">
-                <span className="text-primary font-bold uppercase tracking-[0.3em] text-[10px] mb-4 inline-block">Legal</span>
-                <h1 className="text-4xl md:text-5xl font-black font-heading uppercase tracking-tight">Terms & <span className="text-primary italic">Conditions</span></h1>
-                <p className="text-muted-foreground mt-4">Last Updated: February 10, 2026</p>
-            </div>
+        <main className="min-h-screen pb-20">
+            <PageBanner
+                height="40vh"
+                badge="Legal"
+                badgeIcon={FaRegHandshake}
+                title="Terms & Conditions"
+                image="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop"
+                description="Last Updated: February 10, 2026"
+            />
 
-            <div className="space-y-12 prose prose-sm max-w-none text-muted-foreground">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6">
                 <section>
                     <h2 className="text-2xl font-black text-foreground uppercase tracking-tight flex items-center gap-3 mb-6">
                         <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center text-primary text-sm"><FaRegHandshake /></div>

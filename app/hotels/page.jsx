@@ -5,6 +5,7 @@ import { hotels, guides } from "@/data/dummyData"
 import SectionHeading from "@/components/SectionHeading"
 import { FaStar, FaMapMarkerAlt, FaHotel, FaSwimmer, FaWifi, FaParking, FaUtensils, FaUserTie, FaAward } from "react-icons/fa"
 import Link from "next/link"
+import PageBanner from "@/components/PageBanner"
 
 export default function HotelsPage() {
     const [filter, setFilter] = useState("All")
@@ -21,59 +22,41 @@ export default function HotelsPage() {
 
     return (
         <main className="min-h-screen bg-background text-foreground/90">
-            {/* Hero Section - Focused & Premium */}
-            <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 z-0 ">
-                    <img
-                        src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop"
-                        alt="Luxury Stays in Gilgit Baltistan"
-                        className="w-full h-full object-cover brightness-[0.35]"
-                    />
-                    {/* <div className="absolute inset-0 bg-linear-to-b from-black/60 via-transparent to-background" /> */}
-                </div>
-
-                <div className="relative z-10 text-center px-4 max-w-5xl mx-auto space-y-10 animate-in fade-in zoom-in-95 duration-1000">
-                    <div className="space-y-6">
-                        <span className="inline-flex items-center gap-2 px-5 py-2 bg-primary/10 backdrop-blur-md border border-primary/20 rounded-full text-primary text-[10px] font-black uppercase tracking-[0.4em]">
-                            <FaHotel className="text-sm" />
-                            Premium Accommodations
-                        </span>
-                        <h1 className="text-5xl md:text-8xl font-black text-white uppercase tracking-tighter font-heading leading-[0.9]">
-                            Find Your <br />
-                            <span className="text-primary italic">Sanctuary</span>
-                        </h1>
-                        <p className="text-white/60 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
-                            Discover the most exclusive hotels and hidden gems across the majestic valleys of Gilgit-Baltistan.
-                        </p>
-                    </div>
-
-                    {/* Search Bar Mockup */}
-                    <div className="bg-card/40 backdrop-blur-3xl border border-white/10 p-2.5 rounded-[3rem] shadow-2xl flex flex-col md:flex-row items-center gap-2 max-w-3xl mx-auto">
-                        <div className="flex-1 flex items-center gap-4 px-8 py-4 w-full">
-                            <FaMapMarkerAlt className="text-primary text-lg" />
-                            <div className="text-left flex-1">
-                                <p className="text-[9px] uppercase font-black text-white/40 tracking-widest">Location</p>
-                                <input
-                                    type="text"
-                                    placeholder="Search by city or valley..."
-                                    className="bg-transparent border-none outline-none text-white placeholder:text-white/20 text-sm font-bold w-full"
-                                />
-                            </div>
+            <PageBanner
+                height="screen"
+                badge="Premium Accommodations"
+                badgeIcon={FaHotel}
+                title="Find Your Sanctuary"
+                image="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop"
+                description="Discover the most exclusive hotels and hidden gems across the majestic valleys of Gilgit-Baltistan."
+                showBreadcrumbs={false}
+            >
+                {/* Search Bar Mockup */}
+                <div className="bg-card/40 backdrop-blur-3xl border border-white/10 p-2.5 rounded-[3rem] shadow-2xl flex flex-col md:flex-row items-center gap-2 max-w-3xl mx-auto mt-12 w-full">
+                    <div className="flex-1 flex items-center gap-4 px-8 py-4 w-full">
+                        <FaMapMarkerAlt className="text-primary text-lg" />
+                        <div className="text-left flex-1">
+                            <p className="text-[9px] uppercase font-black text-white/40 tracking-widest">Location</p>
+                            <input
+                                type="text"
+                                placeholder="Search by city or valley..."
+                                className="bg-transparent border-none outline-none text-white placeholder:text-white/20 text-sm font-bold w-full"
+                            />
                         </div>
-                        <div className="hidden md:block w-px h-12 bg-white/10 mx-2" />
-                        <div className="flex-1 flex items-center gap-4 px-8 py-4 w-full text-left">
-                            <FaUserTie className="text-primary text-lg" />
-                            <div className="flex-1">
-                                <p className="text-[9px] uppercase font-black text-white/40 tracking-widest">Guests</p>
-                                <p className="text-white text-sm font-bold">2 Adults, 1 Room</p>
-                            </div>
-                        </div>
-                        <button className="bg-primary text-white p-5 rounded-[2.5rem] font-black uppercase text-xs tracking-[0.2em] hover:bg-white hover:text-primary transition-all active:scale-95 shadow-xl w-full md:w-auto flex items-center justify-center gap-3">
-                            Check Availability
-                        </button>
                     </div>
+                    <div className="hidden md:block w-px h-12 bg-white/10 mx-2" />
+                    <div className="flex-1 flex items-center gap-4 px-8 py-4 w-full text-left">
+                        <FaUserTie className="text-primary text-lg" />
+                        <div className="flex-1">
+                            <p className="text-[9px] uppercase font-black text-white/40 tracking-widest">Guests</p>
+                            <p className="text-white text-sm font-bold">2 Adults, 1 Room</p>
+                        </div>
+                    </div>
+                    <button className="bg-primary text-white p-5 rounded-[2.5rem] font-black uppercase text-xs tracking-[0.2em] hover:bg-white hover:text-primary transition-all active:scale-95 shadow-xl w-full md:w-auto flex items-center justify-center gap-3">
+                        Check Availability
+                    </button>
                 </div>
-            </section>
+            </PageBanner>
 
             {/* Intro Stats Section */}
             <section className="relative z-20 -mt-10 mb-16 px-4">

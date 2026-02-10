@@ -1,6 +1,6 @@
-import PageHeader from "@/components/PageHeader"
+import PageBanner from "@/components/PageBanner"
 import { packages } from "@/data/dummyData"
-import { FaCheck, FaMapMarkerAlt, FaStar } from "react-icons/fa"
+import { FaCheck, FaMapMarkerAlt, FaStar, FaBox } from "react-icons/fa"
 
 export const metadata = {
   title: "Packages - Gilgit Tourism",
@@ -11,16 +11,15 @@ export const metadata = {
 
 import Link from "next/link"
 
-// ... (existing imports)
-
-// ... (existing metadata)
-
 export default function PackagesPage() {
   return (
     <main>
-      <PageHeader
+      <PageBanner
+        height="50vh"
+        badge="All Inclusive"
+        badgeIcon={FaBox}
         title="Travel Packages"
-        subtitle="All Inclusive"
+        image="https://images.unsplash.com/photo-1549400813-982fe3929497?q=80&w=2070&auto=format&fit=crop"
         description="Complete travel packages with accommodation, meals, transport, and expert guides."
       />
 

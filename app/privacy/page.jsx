@@ -1,17 +1,19 @@
-"use client"
-
-import { FaUserSecret, FaLock, FaDatabase, FaEnvelope } from "react-icons/fa"
+import { FaUserSecret, FaLock, FaDatabase, FaEnvelope, FaShieldAlt } from "react-icons/fa"
+import PageBanner from "@/components/PageBanner"
 
 export default function PrivacyPage() {
     return (
-        <main className="min-h-screen pt-32 pb-20 max-w-4xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-16">
-                <span className="text-primary font-bold uppercase tracking-[0.3em] text-[10px] mb-4 inline-block">Security</span>
-                <h1 className="text-4xl md:text-5xl font-black font-heading uppercase tracking-tight">Privacy <span className="text-primary italic">Policy</span></h1>
-                <p className="text-muted-foreground mt-4">Effective Date: February 10, 2026</p>
-            </div>
+        <main className="min-h-screen pb-20">
+            <PageBanner
+                height="40vh"
+                badge="Security"
+                badgeIcon={FaShieldAlt}
+                title="Privacy Policy"
+                image="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
+                description="Effective Date: February 10, 2026"
+            />
 
-            <div className="space-y-12 prose prose-sm max-w-none text-muted-foreground">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6">
                 <section>
                     <h2 className="text-2xl font-black text-foreground uppercase tracking-tight flex items-center gap-3 mb-6">
                         <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center text-primary text-sm"><FaUserSecret /></div>

@@ -1,6 +1,7 @@
-import PageHeader from "@/components/PageHeader"
+import PageBanner from "@/components/PageBanner"
 import ListingCard from "@/components/ListingCard"
 import { tours } from "@/data/dummyData"
+import { FaMountain } from "react-icons/fa"
 
 export const metadata = {
   title: "Tours - Gilgit Tourism",
@@ -11,9 +12,12 @@ export const metadata = {
 export default function ToursPage() {
   return (
     <main>
-      <PageHeader
+      <PageBanner
+        height="50vh"
+        badge="Top Destinations"
+        badgeIcon={FaMountain}
         title="Explore Our Tours"
-        subtitle="Top Destinations"
+        image="https://images.unsplash.com/photo-1549400813-982fe3929497?q=80&w=2070&auto=format&fit=crop"
         description="Discover the breathtaking beauty of Gilgit-Baltistan with our carefully curated tours."
       />
 

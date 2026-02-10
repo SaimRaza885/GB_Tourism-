@@ -4,32 +4,18 @@ import { cars } from "@/data/dummyData"
 import SectionHeading from "@/components/SectionHeading"
 import { FaCar, FaUsers, FaGasPump, FaCheckCircle, FaWhatsapp, FaArrowRight, FaRoad } from "react-icons/fa"
 import Link from "next/link"
+import PageBanner from "@/components/PageBanner"
 
 export default function CarsPage() {
   return (
     <main className="min-h-screen bg-background pt-24 pb-20">
-      {/* Hero */}
-      <section className="relative h-[50vh] min-h-[450px] flex items-center justify-center overflow-hidden mb-20">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=2070&auto=format&fit=crop"
-            alt="Off-road vehicle in mountains"
-            className="w-full h-full object-cover brightness-[0.35]"
-          />
-        </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl">
-          <span className="inline-flex items-center gap-2 px-5 py-2 bg-primary/10 backdrop-blur-md border border-primary/20 rounded-full text-primary text-[10px] font-black uppercase tracking-[0.4em] mb-6">
-            <FaRoad className="text-sm" /> Mountain Ready
-          </span>
-          <h1 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none mb-6">
-            Reliable <br />
-            <span className="text-primary italic">Transport</span>
-          </h1>
-          <p className="text-white/60 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
-            Navigate the rugged beauty of Gilgit-Baltistan with our specialized fleet of 4x4 vehicles and experienced local drivers.
-          </p>
-        </div>
-      </section>
+      <PageBanner
+        badge="Mountain Ready"
+        badgeIcon={FaRoad}
+        title="Reliable Transport"
+        image="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=2070&auto=format&fit=crop"
+        description="Navigate the rugged beauty of Gilgit-Baltistan with our specialized fleet of 4x4 vehicles and experienced local drivers."
+      />
 
       {/* Features */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32">

@@ -3,6 +3,7 @@
 import { FaCar, FaCamera, FaHotel, FaMapMarkedAlt, FaHiking, FaPhoneAlt, FaUtensils, FaPassport, FaCreditCard } from "react-icons/fa"
 import SectionHeading from "@/components/SectionHeading"
 import Link from "next/link"
+import PageBanner from "@/components/PageBanner"
 
 export default function ServicesPage() {
     const mainServices = [
@@ -47,20 +48,12 @@ export default function ServicesPage() {
 
     return (
         <main className="min-h-screen bg-background pt-24 pb-20">
-            {/* Hero */}
-            <section className="relative h-[40vh] flex items-center justify-center bg-muted/50 mb-24 overflow-hidden">
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -mr-64 -mt-64" />
-                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -ml-64 -mb-64" />
-
-                <div className="relative text-center px-4">
-                    <h1 className="text-4xl md:text-6xl font-black font-heading uppercase tracking-tight mb-4">
-                        Our <span className="text-primary italic">Services</span>
-                    </h1>
-                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                        Comprehensive travel solutions tailored for the unique landscape of Gilgit-Baltistan.
-                    </p>
-                </div>
-            </section>
+            <PageBanner
+                height="45vh"
+                title="Our Dedicated Services"
+                image="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop"
+                description="Comprehensive travel solutions tailored for the unique landscape of Gilgit-Baltistan."
+            />
 
             {/* Main Services Grid */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32">

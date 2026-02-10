@@ -4,28 +4,17 @@ import { guides } from "@/data/dummyData"
 import SectionHeading from "@/components/SectionHeading"
 import { FaBullseye, FaEye, FaUsers, FaShieldAlt } from "react-icons/fa"
 import Link from "next/link"
+import PageBanner from "@/components/PageBanner"
 
 export default function AboutPage() {
     return (
         <main className="min-h-screen pt-24 pb-20">
-            {/* Hero Section */}
-            <section className="relative h-[400px] flex items-center justify-center overflow-hidden mb-20">
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop"
-                        alt="About Gilgit Tourism"
-                        className="w-full h-full object-cover brightness-[0.4]"
-                    />
-                </div>
-                <div className="relative z-10 text-center px-4">
-                    <h1 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-4">
-                        Discover Our <span className="text-primary italic">Story</span>
-                    </h1>
-                    <p className="text-white/70 max-w-2xl mx-auto text-lg font-medium">
-                        Connecting adventurous souls with the hidden gems of Gilgit-Baltistan since 2020.
-                    </p>
-                </div>
-            </section>
+            <PageBanner
+                height="50vh"
+                title="Discover Our Story"
+                image="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop"
+                description="Connecting adventurous souls with the hidden gems of Gilgit-Baltistan since 2020."
+            />
 
             {/* Mission & Purpose */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32">

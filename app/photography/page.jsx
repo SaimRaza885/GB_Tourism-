@@ -3,33 +3,18 @@
 import { FaCamera, FaVideo, FaMountain, FaImages, FaWhatsapp, FaStar, FaAward } from "react-icons/fa"
 import SectionHeading from "@/components/SectionHeading"
 import Link from "next/link"
+import PageBanner from "@/components/PageBanner"
 
 export default function PhotographyPage() {
     return (
         <main className="min-h-screen bg-background pt-24 pb-20">
-            {/* Hero Section */}
-            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden mb-20">
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop"
-                        alt="Landscape Photography Hunza"
-                        className="w-full h-full object-cover brightness-[0.3]"
-                    />
-                    <div className="absolute inset-0 bg-linear-to-b from-black/60 via-transparent to-background" />
-                </div>
-                <div className="relative z-10 text-center px-4 max-w-4xl">
-                    <span className="inline-flex items-center gap-2 px-5 py-2 bg-primary/10 backdrop-blur-md border border-primary/20 rounded-full text-primary text-[10px] font-black uppercase tracking-[0.4em] mb-6">
-                        <FaCamera className="text-sm" /> Capturing Memories
-                    </span>
-                    <h1 className="text-5xl md:text-8xl font-black text-white uppercase tracking-tighter leading-none mb-6">
-                        Professional <br />
-                        <span className="text-primary italic">Photography</span>
-                    </h1>
-                    <p className="text-white/60 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
-                        Don't just see the mountains—keep them forever. Professional photography and videography services for your journey.
-                    </p>
-                </div>
-            </section>
+            <PageBanner
+                badge="Capturing Memories"
+                badgeIcon={FaCamera}
+                title="Professional Photography"
+                image="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop"
+                description="Don't just see the mountains—keep them forever. Professional photography and videography services for your journey."
+            />
 
             {/* Services Grid */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32">
