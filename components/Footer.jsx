@@ -84,8 +84,8 @@ export default function Footer() {
             <h4 className="font-heading font-semibold mb-4">About</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-white/60 text-sm hover:text-white transition-colors">
-                  How it Works
+                <Link href="/about" className="text-white/60 text-sm hover:text-white transition-colors">
+                  About Us
                 </Link>
               </li>
               <li>
@@ -94,13 +94,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-white/60 text-sm hover:text-white transition-colors">
-                  Help Center
+                <Link href="/about" className="text-white/60 text-sm hover:text-white transition-colors">
+                  Our Mission
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-white/60 text-sm hover:text-white transition-colors">
-                  Careers
+                <Link href="/guides" className="text-white/60 text-sm hover:text-white transition-colors">
+                  Tour Guides
                 </Link>
               </li>
             </ul>
@@ -126,7 +126,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-white/60 text-sm hover:text-white transition-colors">
+                <Link href="/hotels" className="text-white/60 text-sm hover:text-white transition-colors">
                   Hotels
                 </Link>
               </li>
@@ -138,23 +138,23 @@ export default function Footer() {
             <h4 className="font-heading font-semibold mb-4">Other</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-white/60 text-sm hover:text-white transition-colors">
+                <Link href="/blog" className="text-white/60 text-sm hover:text-white transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-white/60 text-sm hover:text-white transition-colors">
+                <Link href="/privacy" className="text-white/60 text-sm hover:text-white transition-colors">
                   Privacy Notice
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-white/60 text-sm hover:text-white transition-colors">
+                <Link href="/terms" className="text-white/60 text-sm hover:text-white transition-colors">
                   Terms
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-white/60 text-sm hover:text-white transition-colors">
-                  Offers
+                <Link href="/photography" className="text-white/60 text-sm hover:text-white transition-colors">
+                  Photography
                 </Link>
               </li>
             </ul>

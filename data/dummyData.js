@@ -1,3 +1,41 @@
+export const destinations = [
+  {
+    id: "hunza",
+    name: "Hunza Valley",
+    description: "The land of longevity and ancient forts.",
+    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop",
+    tourCount: 12,
+  },
+  {
+    id: "skardu",
+    name: "Skardu",
+    description: "Gateway to the world's highest peaks.",
+    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=2070&auto=format&fit=crop",
+    tourCount: 15,
+  },
+  {
+    id: "gilgit",
+    name: "Gilgit City",
+    description: "The historic hub of the northern areas.",
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop",
+    tourCount: 8,
+  },
+  {
+    id: "ghizer",
+    name: "Ghizer Valley",
+    description: "Crystal clear rivers and colorful lakes.",
+    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2080&auto=format&fit=crop",
+    tourCount: 6,
+  },
+  {
+    id: "astore",
+    name: "Astore & Rama",
+    description: "Lush meadows at the base of Nanga Parbat.",
+    image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=2070&auto=format&fit=crop",
+    tourCount: 5,
+  },
+]
+
 export const tours = [
   {
     id: 1,
@@ -430,3 +468,208 @@ export const features = [
     color: "accent",
   },
 ]
+export const hotels = [
+  {
+    id: 1,
+    name: "Serena Hotel Gilgit",
+    location: "Gilgit",
+    price: 15000,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop",
+    description: "Luxury stay in the heart of Gilgit with stunning mountain views.",
+    longDescription: "Nestled in the foothills of the Karakoram mountain range, Gilgit Serena Hotel stands on six acres of land. The hotel offers a breathtaking view of Gilgit town, the surrounding mountains, and the junction of the Gilgit and Hunza Rivers. Experience unparalleled luxury and traditional hospitality in our elegantly appointed rooms and suites.",
+    amenities: ["Free WiFi", "Mountain View", "Restaurant", "Parking", "Fitness Center", "Meeting Rooms"],
+    type: "Luxury",
+    rooms: [
+      { type: "Deluxe Room", price: 15000, capacity: "2 Adults", description: "Elegant room with mountain views and modern amenities." },
+      { type: "Executive Suite", price: 25000, capacity: "2 Adults, 1 Child", description: "Spacious suite with a separate living area and premium views." }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2050&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop"
+    ]
+  },
+  {
+    id: 2,
+    name: "Hunza Serena Inn",
+    location: "Hunza Valley",
+    price: 18000,
+    rating: 4.8,
+    image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2050&auto=format&fit=crop",
+    description: "Experience the majestic views of Rakaposhi and Ultar Sar from your balcony.",
+    longDescription: "Located in the ancient town of Karimabad, Hunza Serena Inn is spread over six acres of landscaped gardens, offering a stunning views of the Hunza Valley and its surrounding peaks. The hotel is designed in the style of a traditional fort and offers guests a unique blend of comfort and cultural immersion.",
+    amenities: ["Free WiFi", "Garden", "Restaurant", "Balcony", "Guided Tours", "Cultural Nights"],
+    type: "Luxury",
+    rooms: [
+      { type: "Standard Room", price: 18000, capacity: "2 Adults", description: "Comfortable room with traditional decor and valley views." },
+      { type: "Luxury Suite", price: 30000, capacity: "2 Adults, 2 Children", description: "The ultimate luxury experience with panoramic views of Rakaposhi." }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2050&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop"
+    ]
+  },
+  {
+    id: 3,
+    name: "Luxus Hunza Attabad Lake",
+    location: "Attabad Lake",
+    price: 35000,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop",
+    description: "Premium lake-view suites overlooking the turquoise waters of Attabad Lake.",
+    longDescription: "Luxus Hunza is a one-of-a-kind resort built on the shores of the world-famous Attabad Lake. Each suite offers an unobstructed view of the turquoise water and the rugged mountains of the Karakoram range. Modern luxury meets natural wonder in this exclusive mountain getaway.",
+    amenities: ["Boating", "Restaurant", "WiFi", "Modern Decor", "private deck", "Jet Skiing"],
+    type: "Resort",
+    rooms: [
+      { type: "Lake View Suite", price: 35000, capacity: "2 Adults", description: "Stunning suite with floor-to-ceiling windows and a private deck overlooking the lake." },
+      { type: "Presidential Villa", price: 65000, capacity: "4 Adults", description: "Two-bedroom villa with a private lounge and exclusive lake access." }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2050&auto=format&fit=crop"
+    ]
+  },
+  {
+    id: 4,
+    name: "Fairy Meadows Cottages",
+    location: "Fairy Meadows",
+    price: 8000,
+    rating: 4.5,
+    image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=2070&auto=format&fit=crop",
+    description: "Traditional log cabins at the base of Nanga Parbat.",
+    longDescription: "Experience the true essence of mountain living at the Fairy Meadows Cottages. Located at the base of the mighty Nanga Parbat, our traditional log cabins offer a cozy retreat after a day of hiking and exploration. Enjoy the crackling bonfire and the starlit sky in one of the world's most beautiful locations.",
+    amenities: ["Bonfire", "Traditional Food", "Hiking Access", "Local Guides", "Camping Gear"],
+    type: "Heritage",
+    rooms: [
+      { type: "Wooden Cabin", price: 8000, capacity: "3 Adults", description: "Traditional wooden cabin with basic amenities and stunning views of Nanga Parbat." },
+      { type: "Family Suite", price: 12000, capacity: "5 Adults", description: "Larger cabin suitable for families or groups of friends." }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=2070&auto=format&fit=crop"
+    ]
+  },
+  {
+    id: 5,
+    name: "The Eagle's Nest",
+    location: "Duikar, Hunza",
+    price: 12000,
+    rating: 4.7,
+    image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop",
+    description: "Situated at the highest point in Hunza Valley, offering breathtaking sunrise views.",
+    longDescription: "The Eagle's Nest is famous for its panoramic views of the Hunza Valley and several 7,000m+ peaks. Located in Duikar, the highest village in Hunza, the hotel is the perfect spot for photographers and nature lovers wishing to witness the magic of sunrise and sunset over the Karakoram.",
+    amenities: ["Panoramic View", "WiFi", "Café", "Library", "Gift Shop"],
+    type: "Standard",
+    rooms: [
+      { type: "Standard Room", price: 12000, capacity: "2 Adults", description: "Comfortable room with amazing views of the valley." },
+      { type: "Deluxe Family Room", price: 18000, capacity: "4 Adults", description: "Spacious room designed for families with children." }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop"
+    ]
+  },
+  {
+    id: 6,
+    name: "Winter Glamp Skardu",
+    location: "Skardu",
+    price: 25000,
+    rating: 4.6,
+    image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=2070&auto=format&fit=crop",
+    description: "Luxury pods in the cold desert of Skardu, perfect for stargazing.",
+    longDescription: "Winter Glamp offers a unique glamping experience in the heart of the Katpana Desert, also known as the Cold Desert of Skardu. Our luxury pods are designed for comfort and stargazing, offering a warm and cozy retreat in a rugged landscape.",
+    amenities: ["Heated Pods", "Stargazing", "WiFi", "Desert Safaris", "Bonfire"],
+    type: "Resort",
+    rooms: [
+      { type: "Glamping Pod", price: 25000, capacity: "2 Adults", description: "Luxury pod with a clear roof for stargazing and modern interior." },
+      { type: "Family Pod", price: 35000, capacity: "4 Adults", description: "Larger pod with additional sleeping space and a small lounge area." }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop"
+    ]
+  },
+]
+
+export const guides = [
+  {
+    id: 1,
+    name: "Irfan Ali",
+    specialization: "Mountain Trekking",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
+    experience: "10+ Years",
+    rating: 4.9,
+    languages: ["English", "Urdu", "Burushaski"],
+    areasCovered: ["Hunza", "Skardu", "Gojal"],
+    description: "Irfan is a seasoned trekker with over a decade of experience leading expeditions across the Karakoram range. His deep knowledge of the terrain and commitment to safety make him one of the most sought-after guides in the region.",
+    skills: ["First Aid", "Rock Climbing", "Navigation", "Weather Forecasting"],
+    gallery: [
+      "https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=2073&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?q=80&w=2070&auto=format&fit=crop"
+    ]
+  },
+  {
+    id: 2,
+    name: "Zahid Hunzai",
+    specialization: "Cultural Photography",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop",
+    experience: "8 Years",
+    rating: 4.8,
+    languages: ["English", "Urdu", "Shina"],
+    areasCovered: ["Gilgit", "Ghizer", "Hunza"],
+    description: "Zahid is not just a guide but a visual storyteller. He specializes in cultural and landscape photography, helping tourists capture the soul of Gilgit-Baltistan through their lenses.",
+    skills: ["Portrait Photography", "Post-Processing", "Historical Knowledge", "Storytelling"],
+    gallery: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2050&auto=format&fit=crop"
+    ]
+  },
+  {
+    id: 3,
+    name: "Maria Khan",
+    specialization: "Local History & Flora",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop",
+    experience: "5 Years",
+    rating: 4.7,
+    languages: ["English", "Urdu", "Khowar"],
+    areasCovered: ["Phander", "Gupis", "Astore"],
+    description: "Maria is passionate about the unique biodiversity and history of the northern areas. Her tours are educational and immersive, focusing on the hidden gems and local legends.",
+    skills: ["Botanical Identification", "Historical Research", "Public Speaking", "Child-Friendly Tours"],
+    gallery: [
+      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2080&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop"
+    ]
+  },
+  {
+    id: 4,
+    name: "Shahid Karim",
+    specialization: "Off-Road Expeditions",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
+    experience: "12+ Years",
+    rating: 4.9,
+    languages: ["English", "Urdu", "Wakhi"],
+    areasCovered: ["Chapursan", "Misgar", "Shimshal"],
+    description: "Shahid is an expert in off-road driving and remote valley exploration. He has a knack for finding the most isolated and beautiful spots that few tourists ever get to see.",
+    skills: ["4x4 Driving", "Vehicle Repair", "Camping Logistics", "Local Diplomacy"],
+    gallery: [
+      "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2070&auto=format&fit=crop"
+    ]
+  },
+]
+
+

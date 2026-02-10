@@ -1,75 +1,52 @@
 import Link from "next/link"
 import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa"
-import { tours } from "@/data/dummyData"
+import { destinations } from "@/data/dummyData"
 import SectionHeading from "./SectionHeading"
+import { FaMapMarkerAlt, FaGlobe } from "react-icons/fa"
 
 export default function DestinationsSection() {
-  const featuredTours = tours.slice(0, 3)
-
   return (
-    <section className="py-16 lg:py-24 bg-muted">
+    <section className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Top Destinations"
-          title="Explore top destinations"
-          rightContent={
-            <div className="hidden sm:flex items-center gap-2">
-              <button className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-background transition-colors">
-                <FaChevronLeft className="text-muted-foreground" />
-              </button>
-              <button className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:bg-primary/90 transition-colors">
-                <FaChevronRight />
-              </button>
-            </div>
-          }
+          badge="Where to go"
+          title={<>Major <span className="text-primary italic">Regions</span> to Explore</>}
+          description="Gilgit-Baltistan is a vast land of diverse cultures and landscapes. Choose your region and start adventuring."
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredTours.map((tour) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {destinations.map((dest) => (
             <Link
-              key={tour.id}
-              href={`/tours/${tour.id}`}
-              className="block"
+              key={dest.id}
+              href={`/destinations/${dest.id}`}
+              className="group relative h-[350px] rounded-[2.5rem] overflow-hidden shadow-xl"
             >
-              <div
-                className="group bg-card rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col"
-              >
-                <div className="relative aspect-4/3 overflow-hidden">
-                  <img
-                    src={tour.image || "/women.png?height=300&width=300"}
-                    alt={tour.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute top-4 left-4 px-3 py-1.5 bg-primary text-primary-foreground text-xs font-medium rounded-full">
-                    {tour.location}
-                  </div>
+              {/* Background Image */}
+              <img
+                src={dest.image}
+                alt={dest.name}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              {/* Overlays */}
+              <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+
+              <div className="absolute inset-x-0 bottom-0 p-8 space-y-2">
+                <div className="flex items-center gap-2 text-primary text-[10px] font-bold uppercase tracking-[0.2em]">
+                  <FaMapMarkerAlt />
+                  <span>{dest.tourCount}+ Tours Available</span>
                 </div>
-                <div className="p-5 flex flex-col grow">
-                  <h3 className="font-heading font-semibold text-lg mb-1 group-hover:text-primary transition-colors">{tour.name}</h3>
-                  <p className="text-muted-foreground text-sm mb-3">{tour.location}</p>
-                  <div className="flex items-center justify-between mt-auto">
-                    <div>
-                      <span className="text-xl font-bold text-primary">Rs {tour.price.toLocaleString()}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <FaStar className="text-secondary text-sm" />
-                      <span className="text-sm">{tour.rating}</span>
-                    </div>
+                <h3 className="text-3xl font-black text-white font-heading uppercase tracking-tight">{dest.name}</h3>
+                <p className="text-white/70 text-sm line-clamp-1">{dest.description}</p>
+
+                <div className="pt-4 overflow-hidden h-0 group-hover:h-12 transition-all duration-500">
+                  <div className="inline-flex items-center gap-2 bg-white text-foreground px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest">
+                    Explore Region
+                    <FaGlobe className="text-primary" />
                   </div>
                 </div>
               </div>
             </Link>
           ))}
-        </div>
-
-        <div className="text-center mt-10">
-          <Link
-            href="/tours"
-            className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
-          >
-            See All
-            <FaChevronRight className="text-sm" />
-          </Link>
         </div>
       </div>
     </section>
