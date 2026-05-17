@@ -1,5 +1,6 @@
-import Image from "next/image";
 "use client"
+
+import Image from "next/image";
 
 import { use } from "react"
 import { destinations, tours, hotels } from "@/data/index"

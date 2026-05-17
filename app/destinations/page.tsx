@@ -1,5 +1,6 @@
-import Image from "next/image";
 "use client"
+
+import Image from "next/image";
 
 import { destinations } from "@/data/index"
 import PageBanner from "@/components/layout/PageBanner"

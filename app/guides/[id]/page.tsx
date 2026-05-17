@@ -1,5 +1,6 @@
-import Image from "next/image";
 "use client"
+
+import Image from "next/image";
 
 import { guides } from "@/data/index"
 import Link from "next/link"
