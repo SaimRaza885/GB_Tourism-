@@ -120,7 +120,7 @@ npm run start
 
 - 🌐 Portfolio: [saim-raza.vercel.app](https://saim-raza.vercel.app)
 - 💻 GitHub: [@SaimRaza885](https://github.com/SaimRaza885)
-- 📧 Email: saimraza885@gmail.com
+- 📧 Email: saimrazaytt@gmail.com
 
 ---
 
